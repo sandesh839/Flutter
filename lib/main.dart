@@ -1,5 +1,13 @@
+import 'package:basicdemo/HomePractice/Home1.dart';
+import 'package:basicdemo/HomePractice/Home2.dart';
 import 'package:basicdemo/class2.dart';
 import 'package:basicdemo/class2Task.dart';
+import 'package:basicdemo/class3.dart';
+import 'package:basicdemo/class3TaskPlant.dart';
+import 'package:basicdemo/class4_Counter_app.dart';
+import 'package:basicdemo/class5.dart';
+import 'package:basicdemo/class5Button_example.dart';
+import 'package:basicdemo/class6.dart';
 import 'package:basicdemo/homepage.dart';
 import 'package:basicdemo/task.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +43,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Class2task(),
+      home: Home2(),
       // home: const Task(),
     );
   }
