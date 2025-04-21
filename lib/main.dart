@@ -1,3 +1,4 @@
+import 'package:basicdemo/HomePractice/AppDemo.dart';
 import 'package:basicdemo/HomePractice/Home1.dart';
 import 'package:basicdemo/HomePractice/Home2.dart';
 import 'package:basicdemo/HomePractice/counterapp.dart';
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: MyApp(),
+      home: Appdemo(),
       // home: const Task(),
     );
   }
