@@ -3,6 +3,27 @@ import 'package:flutter/material.dart';
 class Appdemo extends StatelessWidget {
   const Appdemo({super.key});
 
+  serviceCard({required IconData icon, required String text}) {
+    return Card(
+      elevation: 1,
+      shadowColor: Colors.black54,
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 19, vertical: 15),
+        child: Column(
+          spacing: 5,
+          children: [
+            Icon(icon, color: Colors.green.shade600, size: 28),
+            Text(
+              text,
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +42,7 @@ class Appdemo extends StatelessWidget {
                       CircleAvatar(
                         radius: 24,
                         backgroundImage: NetworkImage(
-                          'https://images.unsplash.com/photo-1744000043352-eabd36a2ecb8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                          'Assets/images/sandesh1.jpg',
                         ),
                       ),
 
@@ -84,6 +105,7 @@ class Appdemo extends StatelessWidget {
                           child: Container(
                             height: 8,
                             width: 8,
+
                             decoration: BoxDecoration(
                               color: Colors.red,
                               shape: BoxShape.circle,
@@ -119,6 +141,53 @@ class Appdemo extends StatelessWidget {
 
                     Spacer(), //space dere purai right ma laidinxa icon lai
                     Icon(Icons.tune, color: Colors.grey),
+                  ],
+                ),
+              ),
+
+              SizedBox(height: 20),
+              Row(
+                spacing: 5,
+                children: [
+                  serviceCard(icon: Icons.house_outlined, text: "Hotels"),
+                  serviceCard(icon: Icons.flight, text: "Flight"),
+                  serviceCard(icon: Icons.bus_alert, text: "train"),
+                  serviceCard(icon: Icons.train, text: "Train"),
+                ],
+              ),
+
+              SizedBox(height: 20),
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 26, horizontal: 16),
+                width: double.infinity, //all cover garxa width
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100),
+                  gradient: LinearGradient(
+                    colors: [Colors.green.shade300, Colors.green.shade600],
+                  ),
+                ),
+
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: 20,
+                      bottom: 25,
+                      top: 25,
+                      width: 200,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "He whats up boyss",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
